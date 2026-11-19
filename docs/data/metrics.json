@@ -1,0 +1,29 @@
+{
+  "baseline_accuracy": 0.18221920597217509,
+  "model_accuracy": 0.9443501866304717,
+  "per_class_recall": {
+    "WALKING": 0.9879032258064516,
+    "WALKING_UPSTAIRS": 0.9469214437367304,
+    "WALKING_DOWNSTAIRS": 0.919047619047619,
+    "SITTING": 0.8879837067209776,
+    "STANDING": 0.9417293233082706,
+    "LAYING": 0.9757914338919925
+  },
+  "top_confusions": [
+    {
+      "true_label": "SITTING",
+      "predicted_label": "STANDING",
+      "count": 51
+    },
+    {
+      "true_label": "STANDING",
+      "predicted_label": "SITTING",
+      "count": 31
+    },
+    {
+      "true_label": "WALKING_DOWNSTAIRS",
+      "predicted_label": "WALKING_UPSTAIRS",
+      "count": 26
+    }
+  ]
+}
