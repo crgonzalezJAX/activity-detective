@@ -1,0 +1,76 @@
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17263a;background:#eef3f7;font-size:16px}
+*{box-sizing:border-box}
+body{margin:0}
+button,input{font:inherit}
+button{cursor:pointer}
+.page{max-width:1180px;margin:auto;padding:0 32px}
+.site-header{padding:52px 0 42px}
+.eyebrow{margin:0 0 12px;color:#176b83;font-size:.85rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;letter-spacing:-.055em;margin-bottom:18px}
+.intro{font-size:1.2rem;line-height:1.5;max-width:690px;color:#455a6e}
+.results-strip{display:flex;align-items:center;gap:24px;width:fit-content;min-width:min(100%,540px);margin-top:34px;padding:18px 24px;background:#13263b;color:white;border-radius:16px}
+.results-strip>div{display:flex;flex-direction:column;gap:4px;min-width:170px}
+.result-label{color:#bfd0db;font-size:.88rem}
+.results-strip strong{font-size:1.75rem;letter-spacing:-.04em}
+.versus{color:#8ba6b6}
+.game{background:white;border:1px solid #dbe5ec;border-radius:24px;box-shadow:0 18px 48px #18344b13;overflow:hidden}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:30px 34px 24px}
+h2{font-size:2rem;letter-spacing:-.035em;margin-bottom:8px}
+.section-heading p:last-child{margin-bottom:0;color:#52677a}
+.filter{display:flex;align-items:center;gap:10px;white-space:nowrap;font-weight:650;color:#254257;cursor:pointer}
+.filter input{width:18px;height:18px;accent-color:#087e87}
+.chart-card{margin:0 34px;background:#f6f9fb;border:1px solid #e1eaf0;border-radius:16px;padding:18px 18px 12px}
+.chart-topline{display:flex;justify-content:space-between;gap:12px;color:#536c7d;font-size:.86rem;font-weight:650}
+.chart-wrap{height:300px;margin-top:12px}
+canvas{width:100%;height:100%;display:block}
+.legend{display:flex;justify-content:center;gap:24px;color:#53677a;font-size:.9rem;font-weight:650}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{display:block;width:22px;border-top:3px solid}
+.line-x{color:#dc674b}.line-y{color:#148ca1}.line-z{color:#7968b2}
+.game-controls{padding:26px 34px 30px}
+.control-label{font-weight:750;margin-bottom:12px}
+.guess-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.guess-buttons button{padding:13px 10px;border:1px solid #cbdbe4;border-radius:10px;background:white;color:#203c50;font-weight:700;min-height:50px}
+.guess-buttons button:hover:not(:disabled),.guess-buttons button:focus-visible{border-color:#087e87;background:#e8f7f7}
+.guess-buttons button:disabled{cursor:default;opacity:.65}
+.guess-buttons button.chosen{border-color:#087e87;background:#e3f4f2;opacity:1}
+.status{min-height:24px;margin:14px 0 0;color:#315365;font-weight:650}
+.reveal{margin-top:20px;padding:22px;background:#f4f8fa;border-radius:14px}
+.reveal-summary{display:flex;gap:44px;flex-wrap:wrap}
+.reveal-summary p{display:flex;flex-direction:column;gap:5px;margin-bottom:18px}
+.reveal-summary span{font-size:.85rem;color:#5e7282}
+.reveal-summary strong{font-size:1.1rem}
+h3{font-size:1rem;margin-bottom:14px}
+.probabilities{display:grid;gap:9px}
+.probability-row{display:grid;grid-template-columns:155px 1fr 52px;gap:12px;align-items:center;font-size:.9rem}
+.probability-track{height:11px;background:#dce8ed;border-radius:20px;overflow:hidden}
+.probability-fill{height:100%;background:#148ca1;border-radius:20px}
+.probability-value{text-align:right;font-variant-numeric:tabular-nums}
+.game-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px}
+.scoreboard{display:flex;gap:22px;color:#51677a}
+.scoreboard strong{color:#17263a;margin-left:4px;font-variant-numeric:tabular-nums}
+.next-button{padding:12px 24px;border:0;border-radius:10px;background:#087e87;color:white;font-weight:750}
+.next-button:hover:not(:disabled){background:#086a73}
+.next-button:disabled{opacity:.45;cursor:default}
+.spotlight{margin:28px 0;padding:30px 34px;background:#dcecf0;border-radius:20px}
+.spotlight p:last-child{max-width:780px;line-height:1.6;margin:0;color:#385269}
+.chat{margin:28px 0;padding:30px 34px;background:white;border:1px solid #dbe5ec;border-radius:20px}
+.chat>p:not(.eyebrow){color:#52677a}
+.chat button{padding:11px 19px;border:0;border-radius:10px;background:#087e87;color:white;font-weight:750}
+.chat button:hover:not(:disabled){background:#086a73}
+.chat button:disabled{opacity:.5;cursor:default}
+.chat-loading{margin:20px 0}
+.chat-loading p{margin-bottom:8px;color:#385269}
+.chat-loading progress{width:min(100%,500px);height:16px;accent-color:#087e87}
+#chat-status{min-height:24px;margin:14px 0;color:#385269}
+.chat-messages{display:flex;flex-direction:column;gap:12px;max-height:360px;overflow-y:auto;padding:15px;background:#f4f8fa;border-radius:12px}
+.chat-message{max-width:85%;padding:11px 14px;border-radius:12px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.chat-message.user{align-self:flex-end;background:#087e87;color:white}
+.chat-message.assistant{align-self:flex-start;background:#e1ebf0;color:#17263a}
+.chat-form{display:block;margin-top:16px;font-weight:700}
+.chat-form-row{display:flex;gap:10px;margin-top:8px}
+.chat-form input{flex:1;min-width:0;padding:11px 13px;border:1px solid #b9cdd8;border-radius:10px}
+footer{border-top:1px solid #cddde5;padding:26px 0 38px;color:#5e7282;font-size:.9rem;line-height:1.5}
+a{color:#075f76}
+@media(max-width:700px){.page{padding:0 16px}.site-header{padding:32px 0}.results-strip{min-width:0;width:100%;gap:12px;padding:16px}.results-strip>div{min-width:0;flex:1}.results-strip strong{font-size:1.4rem}.section-heading{align-items:start;flex-direction:column;padding:24px 20px 18px}.chart-card{margin:0 20px;padding:14px}.chart-topline{flex-direction:column;gap:2px}.chart-wrap{height:240px}.game-controls{padding:22px 20px}.guess-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}.probability-row{grid-template-columns:125px 1fr 44px;gap:7px;font-size:.8rem}.game-footer{align-items:stretch;flex-direction:column}.next-button{width:100%}.spotlight,.chat{padding:24px 20px}}
